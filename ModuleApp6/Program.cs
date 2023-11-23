@@ -7,6 +7,7 @@ class Program
         Console.WriteLine("Добро пожаловать в магазин!");
         StoreProducts myProducts = new();
         myProducts.AddProducts();
-        DeliveryService.ChooseDelivery();
+        Order<Delivery, StoreProducts> order = new(DeliveryService.ChooseDelivery(), myProducts);
+        order.PlacingAnOrder();
     }
 }

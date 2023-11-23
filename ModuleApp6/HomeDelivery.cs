@@ -2,7 +2,7 @@
 {
     class HomeDelivery : Delivery
     {
-        private Courier courier;
+        internal Courier courier;
 
         public HomeDelivery(string address)
         {
